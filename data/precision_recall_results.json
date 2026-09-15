@@ -1,0 +1,68 @@
+{
+  "n": 753,
+  "n_matched": 124,
+  "prevalence": 0.1646746347941567,
+  "n_valid_rcr": 751,
+  "n_matched_rcr": 124,
+  "pr_at_k_citation": {
+    "10": {
+      "precision": 0.7,
+      "recall": 0.056451612903225805,
+      "tp": 7
+    },
+    "25": {
+      "precision": 0.6,
+      "recall": 0.12096774193548387,
+      "tp": 15
+    },
+    "50": {
+      "precision": 0.46,
+      "recall": 0.18548387096774194,
+      "tp": 23
+    },
+    "100": {
+      "precision": 0.37,
+      "recall": 0.29838709677419356,
+      "tp": 37
+    },
+    "250": {
+      "precision": 0.324,
+      "recall": 0.6532258064516129,
+      "tp": 81
+    }
+  },
+  "pr_at_k_rcr": {
+    "10": {
+      "precision": 0.6,
+      "recall": 0.04838709677419355,
+      "tp": 6
+    },
+    "25": {
+      "precision": 0.48,
+      "recall": 0.0967741935483871,
+      "tp": 12
+    },
+    "50": {
+      "precision": 0.34,
+      "recall": 0.13709677419354838,
+      "tp": 17
+    },
+    "100": {
+      "precision": 0.28,
+      "recall": 0.22580645161290322,
+      "tp": 28
+    },
+    "250": {
+      "precision": 0.252,
+      "recall": 0.5080645161290323,
+      "tp": 63
+    }
+  },
+  "ap_citation": 0.392781391138771,
+  "ap_rcr": 0.28985797572981,
+  "matched_rank_min": 1,
+  "matched_rank_max": 634,
+  "matched_rank_median": 176.0,
+  "matched_rank_q1": 73,
+  "matched_rank_q3": 338
+}

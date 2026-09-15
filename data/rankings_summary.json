@@ -1,0 +1,132 @@
+{
+  "n": 753,
+  "guideline_matched_count": 124,
+  "spearman_rho": -0.08671375786992558,
+  "spearman_pvalue": 0.01731122144139234,
+  "top10_overlap_count": 0,
+  "top10_overlap_pmids": [],
+  "top10_citation": [
+    {
+      "pmid": "26919512",
+      "title": "Imaging modalities for the non-invasive diagnosis of endometriosis",
+      "citation_count": 428,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "28525302",
+      "title": "Treatment of Endometriosis-Associated Pain with Elagolix, an Oral GnRH Antagonist",
+      "citation_count": 370,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "22723324",
+      "title": "The impact of excision of ovarian endometrioma on ovarian reserve: a systematic review and meta-analysis",
+      "citation_count": 365,
+      "guideline_matched": false
+    },
+    {
+      "pmid": "15482763",
+      "title": "Laparoscopic excision of endometriosis: a randomized, placebo-controlled trial",
+      "citation_count": 347,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "18425908",
+      "title": "Excisional surgery versus ablative surgery for ovarian endometriomata",
+      "citation_count": 293,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "31318420",
+      "title": "Reproductive, obstetric, and perinatal outcomes of women with adenomyosis and endometriosis: a systematic review and meta-analysis",
+      "citation_count": 288,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "27132058",
+      "title": "Blood biomarkers for the non-invasive diagnosis of endometriosis",
+      "citation_count": 287,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "25180023",
+      "title": "Systematic review of endometriosis pain assessment: how to choose a scale?",
+      "citation_count": 285,
+      "guideline_matched": false
+    },
+    {
+      "pmid": "20462942",
+      "title": "Peripheral biomarkers of endometriosis: a systematic review",
+      "citation_count": 280,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "22975114",
+      "title": "Surgical excision of endometriomas and ovarian reserve: a systematic review on serum antim\u00fcllerian hormone level modifications",
+      "citation_count": 276,
+      "guideline_matched": false
+    }
+  ],
+  "top10_guideline": [
+    {
+      "pmid": "39588841",
+      "title": "Excisional surgery versus ablative surgery for ovarian endometrioma",
+      "citation_count": 17,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "33345783",
+      "title": "Treatment of Thoracic Endometriosis Syndrome: A Meta-Analysis and Review",
+      "citation_count": 32,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "32912633",
+      "title": "Relugolix, an oral gonadotropin-releasing hormone receptor antagonist, reduces endometriosis-associated pain in a dose-response manner: a randomized, double-blind, placebo-controlled study",
+      "citation_count": 69,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "33020832",
+      "title": "Endometriosis recurrence following post-operative hormonal suppression: a systematic review and meta-analysis",
+      "citation_count": 149,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "33202017",
+      "title": "Endometriosis and cancer: a systematic review and meta-analysis",
+      "citation_count": 229,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "33310168",
+      "title": "Excision versus Ablation for Management of Minimal to Mild Endometriosis: A Systematic Review and Meta-analysis",
+      "citation_count": 18,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "34370858",
+      "title": "The ultra-long study: a randomized controlled trial evaluating long-term GnRH downregulation prior to ART in women with endometriosis",
+      "citation_count": 20,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "34431079",
+      "title": "Pentoxifylline for the treatment of endometriosis-associated pain and infertility",
+      "citation_count": 24,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "34928503",
+      "title": "Levonorgestrel-releasing intrauterine device (LNG-IUD) for symptomatic endometriosis following surgery",
+      "citation_count": 27,
+      "guideline_matched": true
+    },
+    {
+      "pmid": "35128434",
+      "title": "Systematic review of patient-specific pre-operative predictors of pain improvement to endometriosis surgery",
+      "citation_count": 9,
+      "guideline_matched": true
+    }
+  ]
+}
