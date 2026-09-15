@@ -1245,7 +1245,7 @@
     "year": "2005",
     "doi": "10.1093/humrep/dei207",
     "guideline_matched": true,
-    "match_method": "fuzzy_0.62"
+    "match_method": "fuzzy_0.62_manually_accepted"
   },
   {
     "pmid": "28579409",
@@ -1365,7 +1365,7 @@
     "year": "2023",
     "doi": "10.1002/14651858.CD014788.pub2",
     "guideline_matched": false,
-    "match_method": "fuzzy_rejected_manual_review_false_positive"
+    "match_method": "fuzzy_0.62_manually_rejected"
   },
   {
     "pmid": "28668150",
@@ -3349,7 +3349,7 @@
     "year": "2005",
     "doi": "10.1002/14651858.CD004753.pub2",
     "guideline_matched": true,
-    "match_method": "fuzzy_0.62"
+    "match_method": "fuzzy_0.62_manually_accepted"
   },
   {
     "pmid": "37763762",
@@ -3677,7 +3677,7 @@
     "year": "2007",
     "doi": "10.1002/14651858.CD000346.pub2",
     "guideline_matched": true,
-    "match_method": "fuzzy_0.64"
+    "match_method": "fuzzy_0.64_manually_accepted"
   },
   {
     "pmid": "39607442",

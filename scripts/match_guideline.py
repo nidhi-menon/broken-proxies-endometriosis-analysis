@@ -6,6 +6,10 @@ import difflib
 with open("data/guideline_refs_blob_normalized.txt") as f:
     blob = f.read()
 
+with open("data/fuzzy_match_overrides.json") as f:
+    overrides = json.load(f)
+    overrides.pop("_description", None)
+
 
 def normalize(s):
     s = s.lower()
@@ -20,9 +24,12 @@ with open("data/csv-endometrio-set.csv", encoding="utf-8-sig") as f:
 
 results = []
 exact_hits = 0
-fuzzy_hits = 0
+fuzzy_accepted = 0
+fuzzy_rejected = 0
+needs_review = []
 
 for row in rows:
+    pmid = row["PMID"]
     title = row["Title"].rstrip(".")
     norm_title = normalize(title)
     hit = False
@@ -31,7 +38,7 @@ for row in rows:
     # substring-matching anywhere in a document about endometriosis
     if len(norm_title) < 25:
         results.append({
-            "pmid": row["PMID"],
+            "pmid": pmid,
             "title": row["Title"],
             "year": row["Publication Year"],
             "doi": row["DOI"],
@@ -63,12 +70,25 @@ for row in rows:
                 if ratio > 0.6:
                     candidate_found = True
         if candidate_found:
-            hit = True
-            method = f"fuzzy_{best_ratio:.2f}"
-            fuzzy_hits += 1
+            # Fuzzy candidates are NEVER auto-accepted or auto-rejected here.
+            # Every fuzzy candidate must have a corresponding entry in
+            # data/fuzzy_match_overrides.json recording a manual decision;
+            # anything not yet reviewed is flagged as needs_review so a
+            # fresh run never silently reproduces an unreviewed guess.
+            override = overrides.get(pmid)
+            if override is None:
+                method = f"fuzzy_{best_ratio:.2f}_needs_review"
+                needs_review.append({"pmid": pmid, "title": row["Title"], "ratio": round(best_ratio, 2)})
+            elif override["decision"] == "accept":
+                hit = True
+                method = f"fuzzy_{best_ratio:.2f}_manually_accepted"
+                fuzzy_accepted += 1
+            else:
+                method = f"fuzzy_{best_ratio:.2f}_manually_rejected"
+                fuzzy_rejected += 1
 
     results.append({
-        "pmid": row["PMID"],
+        "pmid": pmid,
         "title": row["Title"],
         "year": row["Publication Year"],
         "doi": row["DOI"],
@@ -76,8 +96,16 @@ for row in rows:
         "match_method": method,
     })
 
-print("total:", len(results), "exact:", exact_hits, "fuzzy:", fuzzy_hits,
+print("total:", len(results), "exact:", exact_hits,
+      "fuzzy accepted:", fuzzy_accepted, "fuzzy rejected:", fuzzy_rejected,
       "total matched:", sum(1 for r in results if r["guideline_matched"]))
+
+if needs_review:
+    print(f"\nWARNING: {len(needs_review)} fuzzy candidate(s) have no entry in "
+          f"data/fuzzy_match_overrides.json and were left unmatched pending review:")
+    for c in needs_review:
+        print(f"  {c['pmid']} (ratio {c['ratio']}): {c['title']}")
+    print("Add a decision for each to data/fuzzy_match_overrides.json and re-run.")
 
 with open("data/guideline_match_results.json", "w") as f:
     json.dump(results, f, indent=2)

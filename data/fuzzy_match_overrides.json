@@ -1,0 +1,23 @@
+{
+  "_description": "Manual adjudications for fuzzy-match candidates (similarity ratio > 0.6) found by match_guideline.py. Each entry records the human decision and reason. Any fuzzy candidate NOT listed here is left as needs_review=true by the pipeline rather than being auto-accepted or auto-rejected.",
+  "16246860": {
+    "decision": "accept",
+    "ratio": 0.62,
+    "reason": "Title differs only by a trailing ': a Cochrane Review' suffix not present in the guideline's citation text; underlying paper and DOI match exactly."
+  },
+  "37341141": {
+    "decision": "reject",
+    "ratio": 0.6,
+    "reason": "False positive: the matched window in the guideline reference text belongs to a different paper (PMID 14583930, 'Gonadotrophin-releasing hormone analogues for endometriosis: bone mineral density'), which shares most of its title text with this paper's more generic, truncated title. Verified by inspecting the matched text window directly."
+  },
+  "16235379": {
+    "decision": "accept",
+    "ratio": 0.62,
+    "reason": "Title differs only by a trailing 'Cochrane Database Syst Rev' citation suffix appended in the guideline's reference text; underlying paper and DOI match exactly."
+  },
+  "17636631": {
+    "decision": "accept",
+    "ratio": 0.64,
+    "reason": "Title differs only by a trailing citation suffix in the guideline's reference text; underlying paper and DOI match exactly. The 'WITHDRAWN:' prefix in the PubMed title (a Cochrane review withdrawal notice) does not appear in the guideline's citation text, which cites the original review."
+  }
+}
