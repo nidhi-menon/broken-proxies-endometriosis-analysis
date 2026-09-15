@@ -1,5 +1,7 @@
 # Broken Proxies: Endometriosis Corpus Analysis
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22778879.svg)](https://doi.org/10.5281/zenodo.22778879)
+
 Analysis code and derived data for the empirical demonstration (Section 5) of:
 
 > Nidhi Menon, "Broken Proxies: Rethinking Scientometric Ranking Signals for Patient-Facing Research Discovery," in *Research Discovery by Integrating Recommenders with Scientometrics* (Springer Nature, edited volume, forthcoming).
@@ -100,6 +102,8 @@ If you plan to redistribute the derived data further, check the current terms of
 
 ## Citation
 
-If you use this code or data, please cite the chapter:
+If you use this code or data, please cite the chapter, and optionally this repository's archived release:
 
 > Menon, N. "Broken Proxies: Rethinking Scientometric Ranking Signals for Patient-Facing Research Discovery." In *Research Discovery by Integrating Recommenders with Scientometrics*. Springer Nature (forthcoming).
+
+> Menon, N. (2026). broken-proxies-endometriosis-analysis (v1.0.0) [Data set and code]. Zenodo. https://doi.org/10.5281/zenodo.22778879
